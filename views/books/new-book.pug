@@ -1,0 +1,25 @@
+extends ../layout
+
+block content
+    div.library-forms
+        h1 New Book
+        form(action="/books", method="post")
+            div.error-container
+                include errors
+
+            p
+                label(for='title') Title
+                input#title(name='title' , type='text' value=book.title)
+            p
+                label(for='author') Author
+                input#author(name='author', type='text')
+            p
+                label(for='genre') Genre
+                input#genre(name='genre', type='text')
+            p
+                label(for='year') Year
+                input#year(name='year', type='text')
+            div.main-form-opt
+                a.button(href='/books') Cancel
+                input.submit(type='submit', value='Create New Book')
+                

@@ -1,0 +1,27 @@
+if (noResults) 
+            p.noResultsMsg= noResults
+else 
+    table
+        thead
+            tr
+            th.book-title Title
+            th.book-details Author
+            th.book-details Genre
+            th.book-details Year
+        tbody
+            each book in books
+                tr
+                    td
+                        a(href="/books/" + book.id)= book.title
+                    td= book.author
+                    td= book.genre
+                    td= book.year     
+    -let pageNum = 1        
+    ul
+        while pageNum <= pages
+            li
+                if (query) 
+                    a.paginationBtn(href=`?page=${pageNum}&q=${query}`)= pageNum++ 
+                else 
+                    a.paginationBtn(href=`/books?page=${pageNum}`)= pageNum++
+
