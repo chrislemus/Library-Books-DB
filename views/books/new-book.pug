@@ -3,7 +3,7 @@ extends ../layout
 block content
     div.library-forms
         h1 New Book
-        form(action="/books", method="post")
+        form(action="/books/new", method="post")
             div.error-container
                 include errors
 

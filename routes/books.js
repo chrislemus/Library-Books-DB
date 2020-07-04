@@ -71,7 +71,7 @@ router.get('/new', function(req, res) {
 });
 
 /* post new book to database */
-router.post('/', asyncHandler(async(req, res) => {
+router.post('/new', asyncHandler(async(req, res) => {
   let book;
   try { //if input passes validation we'll add new book to database
     book = await Books.create(req.body);

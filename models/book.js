@@ -29,7 +29,7 @@ module.exports = (sequelize) => {
                     msg: '"Genre" is required'
                 },
                 is: {
-                    args: /^[a-z]*$/,
+                    args: /^[a-zA-Z]*$/,
                     msg: '"genre" value must be letters only'
                 }
             }
