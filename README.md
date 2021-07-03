@@ -1,5 +1,5 @@
 # Library Books DB
->A library application running on Express retrieves book information from a database. Allows for CRUD operations on client side. 
+>Online game show app built with vanilla JS and using the Object-Oriented Programming paradigm.
 
 
 **Table of Contents**  
